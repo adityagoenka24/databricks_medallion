@@ -13,7 +13,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
-    "pyspark==3.5.*", "pytest>=8", "chispa"
+    "pyspark==3.5.*", "pytest>=8", "chispa", "databricks-sdk", "setuptools", "pandas<2.3", "numpy<2", "pyarrow"
 ]
 
 [project.scripts]

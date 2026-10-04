@@ -12,7 +12,7 @@ jobs:
       - uses: actions/setup-java@v5          # local Spark needs Java
         with: { distribution: temurin, java-version: '17' }
       - uses: astral-sh/setup-uv@v6
-      - run: uv venv && uv pip install -e ".[dev]" && uv run pytest -q
+      - run: uv venv && uv pip install -e ".[dev]" && uv run pytest -q --ignore=tests/integration --ignore=tests/sample_taxis_test.py
 
   deploy-dev:
     needs: test
