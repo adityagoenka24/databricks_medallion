@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4          # local Spark needs Java
+      - uses: actions/setup-java@v5          # local Spark needs Java
         with: { distribution: temurin, java-version: '17' }
       - uses: astral-sh/setup-uv@v3
       - run: uv venv && uv pip install -e ".[dev]" && uv run pytest -q
